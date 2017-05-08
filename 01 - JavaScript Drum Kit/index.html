@@ -58,6 +58,7 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+
   function playSound(e){
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
@@ -65,6 +66,7 @@
     audio.currentTime = 0; // rewind audio to the start
     audio.play();
     key.classList.add('playing');
+
     document.addEventListener('keyup', function(){
       key.classList.remove('playing');
       return;
